@@ -1,0 +1,95 @@
+body{
+	margin: 0;
+	background-color: #eee;
+	font-family: 'Hanuman', serif;
+	font-family: 'Arimo', sans-serif;
+}
+ul{
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+.top-bar{
+    width: 100%;
+    background-color: #1F686B;
+    float: left;
+}
+.menu-bar{
+    width: 19%;
+    float: left;
+    border-right: 2px solid #000;
+}
+.btn-menu{
+    color: #fff;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 22px;
+}
+.btn-menu:hover{
+    opacity: 0.8;
+}
+.header{
+    width: 80%;
+    float: left;
+}
+.header .title{
+    float: left;
+    width: 30%;
+    color: #fff;
+    padding: 13px 5px;
+    box-sizing: border-box;
+}
+.header .pagination{
+    width: 70%;
+    float: left;
+}
+.header .pagination ul{
+    float: right;
+}
+.header .pagination ul li{
+    float: left;
+    background-color: #ccc; 
+    padding: 5px 10px; 
+    margin: 8px;
+    cursor: pointer;
+}
+.menu{
+    width: 19%;
+    float: left;
+    background-color: gray;
+    border-right: 2px solid #000;
+}
+.menu ul li{
+    float: left;
+    padding: 10px;
+    color: #fff;
+    width: 100%;
+    border-bottom: 1px solid #eee;
+    box-sizing: border-box;
+    cursor: pointer;
+}
+.menu ul li:hover{
+    background-color: rgb(35, 96, 209);
+    color: #000;
+} 
+.content{
+    width: 80%;
+    float: left;
+    padding: 4px; 
+}
+table{
+    width: 100%;
+    float: left;
+    border-collapse: collapse;
+}
+table tr th{
+    background-color: #000;
+    color: #fff;
+    border: 1px solid #fff;
+    padding: 4px; 
+}
+table tr td{
+    background-color: rgb(200, 203, 206);
+    border: 1px solid #fff;
+    padding: 5px;
+}

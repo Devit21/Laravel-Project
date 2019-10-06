@@ -5,8 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link href="https://fonts.googleapis.com/css?family=Arimo|Hanuman&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="fontawesome-free-5.3.1-web/css/all.min.css">
-    <link rel="stylesheet" href="admin.css">
+    <link rel="stylesheet" href="style/fontawesome-free-5.3.1-web/css/all.min.css">
+    <link rel="stylesheet" href="style/admin.css">
+    <script src="js/jquery-3.2.1.min.js"></script>
     <title>Document</title>
 </head>
 <body>
@@ -22,7 +23,7 @@
             </div>
             <div class="pagination">
                 <ul>
-                    <li>Add</li>
+                    <li id="btnAdd">Add</li>
                     <li>
                         <select>
                             <option value="2">2</option>
@@ -65,5 +66,15 @@
             </tr>
         </table>
     </div>
+    
 </body>
+<script>
+    $(document).ready(function(){
+        var body=$('body');
+        var popUp="<div class='popup'></div>"
+        $('#btnAdd').click(function(){
+            body.append(popUp);
+        });
+    });
+</script>
 </html>

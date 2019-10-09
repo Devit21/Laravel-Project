@@ -14,5 +14,8 @@
 Route::get('/', function () {
     return view('welcome');
 });
-
+ //Dashboard
 Route::get('/admin', 'DashboardController@index');
+
+//main source
+Route::get('/main/status.html',['uses' => 'ProductController@index']);

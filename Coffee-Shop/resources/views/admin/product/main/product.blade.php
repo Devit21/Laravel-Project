@@ -12,7 +12,7 @@
 @section('contain')
 
 <header class="panel_header">
-		<h2 class="title pull-left">Dashboad | Status</h2>
+		<h2 class="title pull-left">Dashboad | Products</h2>
 	</header>
   <!-- TABLE LIST STATUS -->
   <div class="row " id="content-body">
@@ -21,14 +21,14 @@
 		<div class="row">
 			<div class="col-sm-2 col-xs-2">
 					<div class="form-group">
-						<a href="{{ URL::to('/main/status/create.html') }}" class="btn btn-success">Add Status</a>
+						<a href="{{ URL::to('/main/product/create.html') }}" class="btn btn-success">Add Products</a>
 					</div>
 			</div>
 			<div class="col-sm-10 col-xs-10">
-				<form method="get" action="{{ URL::to('/main/status/search') }}" role="search" accept-charset="UTF-8">
+				<form method="get" action="{{ URL::to('/main/product/search') }}" role="search" accept-charset="UTF-8">
 					<div class="form-group">
 						<div class="input-group col-sm-12 col-xs-12">
-							<input type="text" name="txtSearch" id="txtSearch" class="form-control" placeholder="Search id, title, description">
+							<input type="text" name="txtSearch" id="txtSearch" class="form-control" placeholder="Search id, name">
 							<div class="input-group-btn">
 								<button type="submit" class="btn btn-default" id="btnSearch"><i><span class="glyphicon glyphicon-search"></i></button>
 							</div><!-- /itnput-group-btn -->
@@ -58,7 +58,13 @@
 						<td>{{ $pd->price}}</td>
 						<td>{{ $pd->created_at}}</td>
 						<td>{{ $pd->updated_at}}</td>
-						<td></td>
+						
+
+							<td>
+								<a href="{{ URL::to('/main/product/')."/edit/".$pd->p_id }}" class="btn btn-primary btn-ms">Edit</a> &nbsp;
+								<a href="{{ URL::to('/main/product')."/delete/".$pd->p_id }}" class="btn btn-danger btn-ms">Delete</a>
+							</td>
+
 					</tr>
 					@endforeach
 					

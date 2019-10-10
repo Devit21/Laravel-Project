@@ -102,10 +102,10 @@
                             </a>
                         </li>
                         <!-- crud Status -->
-                         <li class=""> <a href="javascript:"> <i class="fa fa-wrench"></i> <span class="title">Crud Status</span> <span class="arrow "></span> </a>
+                         <li class=""> <a href="javascript:"> <i class="fa fa-wrench"></i> <span class="title">Management</span> <span class="arrow "></span> </a>
                             <ul class="sub-menu">
-                                <li class=""> <a href="{{ URL::to('main/status.html') }}"> <i class="fa fa-plus-square"></i> <span class="title">MainController Status</span></a> </li>
-                                <li class=""> <a href="{{ URL::to('json/status.html') }}"> <i class="fa fa-plus-square"></i> <span class="title">JSONController Status</span></a> </li>
+                                <li class=""> <a href="{{ URL::to('main/product.html') }}"> <i class="fa fa-plus-square"></i> <span class="title">Products</span></a> </li>
+                                <li class=""> <a href="{{ URL::to('json/status.html') }}"> <i class="fa fa-plus-square"></i> <span class="title">Report</span></a> </li>
                             </ul>
                         </li>
                    

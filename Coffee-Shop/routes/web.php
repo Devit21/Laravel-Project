@@ -21,7 +21,7 @@ Route::get('/admin', 'DashboardController@index');
 Route::get('/main/product.html',['uses' => 'ProductController@index']);
 Route::get('/main/product/create.html',['uses' => 'ProductController@create']);
 Route::post('/main/product/store',['uses' => 'ProductController@store']);
-Route::get ( '/main/product/show/{id}', ['uses' => 'ProductController@show' ]);
 Route::get ( '/main/product/edit/{id}', ['uses' => 'ProductController@edit' ]);
 Route::post ( '/main/product/update', ['uses' => 'ProductController@update' ]);
+Route::get ( '/main/product/delete/{id}', ['uses' => 'ProductController@destroy' ]);
 

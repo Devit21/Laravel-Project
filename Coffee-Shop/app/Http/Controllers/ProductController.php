@@ -134,8 +134,21 @@ class ProductController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(Request $request, $id)
     {
-        //
+        $id = preg_replace ( '#[^0-9]#', '',  $id );
+    	
+    	if ( !empty($id)) {
+    		//delete action here 
+    		$this->products->where('p_id', $id)->delete();
+    		
+    		$request->session()->flash('message','<div class="alert alert-success">
+                                              <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+                                              <strong>Delete Success!</strong>.
+                                            </div>');
+    		
+    	} 
+    	return redirect('main/product.html');
+
     }
 }

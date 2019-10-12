@@ -20,6 +20,7 @@ Route::get('/admin', 'DashboardController@index');
 //main source
 // Route::get('/main/status.html',['uses' => 'ProductController@index']);
 
+//main status
 Route::get('/main/status.html',['uses' => 'StatusMainController@index']);
 Route::get('/main/status/create.html',['uses' => 'StatusMainController@create']);
 Route::post('/main/status/store',['uses' => 'StatusMainController@store']);

@@ -14,7 +14,7 @@ use App\tbl_status;
 class StatusMainController extends Controller
 {
 
-    private $status, $date, $author, $limit = 5;
+    private $status, $date, $author, $limit = 1;
 
     public function __construct(tbl_status $status){
         $this->status = $status;
@@ -33,7 +33,7 @@ class StatusMainController extends Controller
     {
         $status =$this->status->orderBy('status_id', 'desc')->paginate($this->limit); 
 
-        return view('admin/status/status', compact('status'));
+        return view('admin/status/main/status', compact('status'));
     }
 
     /**

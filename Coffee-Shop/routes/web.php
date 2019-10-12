@@ -18,4 +18,13 @@ Route::get('/', function () {
 Route::get('/admin', 'DashboardController@index');
 
 //main source
-Route::get('/main/status.html',['uses' => 'ProductController@index']);
+// Route::get('/main/status.html',['uses' => 'ProductController@index']);
+
+Route::get('/main/status.html',['uses' => 'StatusMainController@index']);
+Route::get('/main/status/create.html',['uses' => 'StatusMainController@create']);
+Route::post('/main/status/store',['uses' => 'StatusMainController@store']);
+Route::get('/main/status/show/{id}',['uses' => 'StatusMainController@show']);
+Route::get('/main/status/edit/{id}',['uses' => 'StatusMainController@edit']);
+Route::get('/main/status/update',['uses' => 'StatusMainController@update']);
+Route::get('/main/status/delete/{id}',['uses' => 'StatusMainController@destroy']);
+Route::get('/main/status/search',['uses' => 'StatusMainController@search']);

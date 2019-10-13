@@ -106,25 +106,26 @@ class ProductController extends Controller
      */
     public function update(Request $request)
     {
-        $id = preg_replace ( '#[^0-9]#', '',  $request->txtId );
+        // $id = preg_replace ( '#[^0-9]#', '',  $request->txtId );
 
-    	if ( !empty($id)) {
-    		//update process here
-    		$this->products->where('p_id', $id)->update([
-    				'p_name' 			=>  $request->txtName,
-    				'price'          	=>  $request->txtDescription,
-    				'updated_at' 			=>  $this->date
-    		]);
+    	// if ( !empty($id)) {
+    	// 	//update process here
+    	// 	$this->products->where('p_id', $id)->update([
+    	// 			'p_name' 			=>  $request->txtName,
+    	// 			'price'          	=>  $request->txtDescription,
+    	// 			'updated_at' 			=>  $this->date
+    	// 	]);
     		
-    		$request->session()->flash('message','<div class="alert alert-success">
-                                              <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
-                                              <strong>update Success!</strong>.
-                                            </div>');
+    	// 	$request->session()->flash('message','<div class="alert alert-success">
+        //                                       <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+        //                                       <strong>update Success!</strong>.
+        //                                     </div>');
     		
-    		return back();
-    	}else {
-    		return redirect('main/status.html');
-    	}
+    	// 	return back();
+    	// }else {
+    	// 	return redirect('main/status.html');
+        // }
+        die('hello');
 
     }
 

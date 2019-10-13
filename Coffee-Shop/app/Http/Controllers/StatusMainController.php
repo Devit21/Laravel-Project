@@ -173,21 +173,22 @@ class StatusMainController extends Controller
     /*
      * search
      */
-    // public function search(Request $request) {
-    // 	$key = $request->get('txtSearch');
-    // 	//die($key);
-    // 	if (!empty($key)) {
-    // 		//process search
-    // 		$status = $this->status
-    // 						->where('status_id', '=', $key )
-    // 						->orwhere('status_title', 'like', '%'.$key.'%' )
-    // 						->orwhere('status_description','like', '%'.$key.'%' )
-    // 						->orderBy('status_id', 'desc')
-    // 						->paginate($this->limit);
+    public function search(Request $request) {
+    	$key = $request->get('txtSearch');
+    	//die($key);
+    	if (!empty($key)) {
+    		//process search
+    		$status = $this->status
+    						->where('status_id', '=', $key )
+    						->orwhere('status_title', 'like', '%'.$key.'%' )
+    						->orwhere('status_description','like', '%'.$key.'%' )
+    						->orderBy('status_id', 'desc')
+    						->paginate($this->limit);
     		
     		
-    // 		return view('admin/status/main/status', compact('status'));
-    // 	} else {
-    // 		return redirect('main/status.html');
-    // 	}
+    		return view('admin/status/main/status', compact('status'));
+    	} else {
+    		return redirect('main/status.html');
+    	}
     }
+}

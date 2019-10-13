@@ -43,8 +43,8 @@
 					<tr>
 						<th>ID</th>
 						<th>Title</th>
-                    	<th>Status</th>
-                    	<th>Author</th>
+						<th>Status</th>
+						<th>Author</th>
 						<th>Created</th>
 						<th>Updated</th>
 						<th>Action</th>
@@ -53,14 +53,18 @@
 				<tbody id="tbody">
 					@foreach($status as $st)
 					<tr>
-                    <td>{{ $st->status_id}}</td>
-					<td>{{ $st->status_title}}</td>
-					<td>{{ $st->status_id}}</td>
-					<td>{{ $st->status_author}}</td>
-					<td>{{ $st->created_at}}</td>
-                    <td>{{ $st->updated_at}}</td>
-                    <td></td>
-				</tr>
+						<td>{{ $st->status_id }}</td>
+						<td>{{ $st->status_title }}</td>
+						<td>{{ ($st->status == '1')? 'Active':'Delete'  }}</td>
+						<td>{{ $st->status_author }}</td>
+						<td>{{ $st->created_at }}</td>
+						<td>{{ $st->updated_at }}</td>
+						<td>
+						<a href="{{ URL::to('/main/status')."/show/".$st->status_id }}" class="btn btn-success btn-ms " >View</a> &nbsp;
+						<a href="{{ URL::to('/main/status')."/edit/".$st->status_id }}" class="btn btn-primary btn-ms">Edit</a> &nbsp;
+						<a href="{{ URL::to('/main/status')."/delete/".$st->status_id }}" class="btn btn-danger btn-ms">Delete</a>
+						</td>
+					</tr>
 					@endforeach
 					
 				</tbody>

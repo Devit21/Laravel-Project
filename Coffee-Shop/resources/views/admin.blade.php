@@ -112,7 +112,7 @@
                         <!-- user management -->
                          <li class=""> <a href="javascript:;"> <i class="fa fa-user"></i> <span class="title">User</span> <span class="arrow "></span> </a>
                             <ul class="sub-menu">
-								 <li class=""> <a href="{{ URL::to('user.html') }}"> <i class="fa fa-plus-square"></i> <span class="title">Users</span></a> </li>
+								 <li class=""> <a href="{{ URL::to('main/status.html') }}"> <i class="fa fa-plus-square"></i> <span class="title">Users</span></a> </li>
 								 <li class=""> <a href="{{ URL::to('manageUser.html') }}"> <i class="fa fa-magnet"></i> <span class="title">ManageRoleUser</span></a> </li>
 								 <li class=""> <a href="{{ URL::to('user_login_history.html') }}"> <i class="fa fa-history"></i> <span class="title">User Login History</span></a> </li>
                             </ul>
